@@ -1,6 +1,6 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Tests](https://github.com/samuel-0228/rag-complaint-chatbot/actions/workflows/unittests.yml/badge.svg)
+
 
 
 
