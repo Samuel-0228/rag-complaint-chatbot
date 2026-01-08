@@ -1,13 +1,22 @@
-pandas>=2.0.0,<2.2.0  
-numpy>=1.24.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-scikit-learn>=1.3.0
-sentence-transformers>=2.2.0
-langchain>=0.1.0
-chromadb>=0.4.0
-transformers>=4.35.0
-torch>=2.1.0  
-accelerate>=0.24.0
-gradio>=4.0.0
-jupyter>=1.0.0
+# Core data libs (downgraded pandas for Windows compatibility; no build issues)
+pandas==2.0.3
+numpy==1.24.3
+matplotlib==3.7.2
+seaborn==0.12.2
+scikit-learn==1.3.0
+
+# ML/Embeddings
+sentence-transformers==2.2.2
+langchain>=0.0.350,<0.2.0  # Looser for stability; avoids breaking changes
+chromadb==0.4.18
+
+# LLM/UI
+transformers==4.35.2
+torch==2.1.0  # CPU; add +cu118 suffix if GPU available
+accelerate==0.24.1
+gradio>=3.50.0,<5.0  # Looser for UI features
+
+# Dev/Testing
+jupyter==1.0.0
+pytest==7.4.0  # For CI/tests
+black==23.10.0  # Code formatting (optional)
