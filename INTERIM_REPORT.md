@@ -30,4 +30,3 @@ Chunking: Recursive splitter, 500/50.
 Embedding: all-MiniLM-L6-v2 for speed/quality.
 Index: ChromaDB with metadata.
 
-Next: Load full pre-built store for Tasks 3-4.

@@ -1,10 +1,6 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-
-
-
-
 # RAG-Powered Complaint Chatbot for CrediTrust
 
 A Retrieval-Augmented Generation (RAG) system to analyze customer complaints in financial services.
