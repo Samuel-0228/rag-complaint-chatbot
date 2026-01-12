@@ -18,7 +18,6 @@ class RAGPipeline:
         self.model_name = 'all-MiniLM-L6-v2'
         self.embedding_model = SentenceTransformer(self.model_name)
 
-        # Load pre-built parquet
         parquet_path = '../data/raw/complaint_embeddings.parquet'
         if not os.path.exists(parquet_path):
             raise FileNotFoundError(
@@ -27,7 +26,6 @@ class RAGPipeline:
         df_chunks = pd.read_parquet(parquet_path)
         print(f"Loaded {len(df_chunks)} chunks from parquet")
 
-        # Build ChromaDB if not exists
         self.client = chromadb.PersistentClient(path=vector_store_path)
         self.collection_name = "full_complaints"
         self.collection = self.client.get_or_create_collection(
